@@ -14,9 +14,10 @@ Classes:
 3. PlayGame: Accept input for moves made, checks legality of move, make changes to board, display board, and repeat for next move until a player has won or if the game is tied
 4. ComputerOpponent: helps the computer make moves by following the logic from PlayGame
 5. Result: After a winner has been decided, congratulate the victor and asks if the user wants to play agin. If not, end game
+6. PlayChess: All classes are called to play the game
 
 Methods:
-1. game_intro: Welcome and asks the user if they want to load a saved game or play a new game
+1. intro: Welcome and asks the user if they want to load a saved game or play a new game
 2. game_load: Loads a saved game by displaying saved_games and asks for input from the user which file to load
 3. game_mode: Asks the user what mode they want to play (pvp or pvc)
 4. game_start: Player one is white, and player two or computer is black. Player one starts
@@ -31,7 +32,7 @@ Methods:
 13. computer_move: Makes a random move with available pieces
 14. play_again: Asks the user if they want to play again
 
-Arrays or hashes:
+Hashes:
 1. chess_pieces: Hash with methods for each piece, with the piece's name as key. Each method calculates where to each piece can move, and if the opposing player's pieces makes the move possible (calls check_opposition_board)
 2. saved_games: Hash that has the date saved as key, and the saved game as value
 3. player_one_board: Pieces as keys, and current position as value.
@@ -41,3 +42,9 @@ Arrays or hashes:
 Tests:
 1. Making a move: Checks to see if moves are correct
 2. Checking: Checks to see if check, stale mate, and check mate works
+
+Files:
+1. main: Where all calls are made to different classes to play the game
+2. game_logic: Where all methods are to actually play the game
+3. game_intro: Where what will be said to start or load a game
+4. computer_opponent: Where the computer logic will be
